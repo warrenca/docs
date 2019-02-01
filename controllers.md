@@ -232,9 +232,14 @@ By default, `Route::resource` will create the route parameters for your resource
         'users' => 'admin_user'
     ]);
 
- The example above generates the following URIs for the resource's `show` route:
+    Route::resource('admin-users', 'UserController')->parameters([
+        'admin-users' => 'user'
+    ]);
+
+ The examples above generate the following URIs for the resource's `show` route:
 
     /users/{admin_user}
+    /admin-users/{user}
 
 <a name="restful-localizing-resource-uris"></a>
 ### Localizing Resource URIs
